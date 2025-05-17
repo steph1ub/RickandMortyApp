@@ -1,0 +1,6 @@
+.main-content {
+  padding: 2rem;
+  min-height: 80vh;
+  background: #2A7B9B;
+background: linear-gradient(-180deg,rgb(10, 33, 43) 0%, rgb(5, 78, 68) 50%, rgb(5, 78, 68) 100%);
+}

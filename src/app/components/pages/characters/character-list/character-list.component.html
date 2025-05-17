@@ -1,0 +1,33 @@
+<div class="container">
+  <p class="title">
+    Rick and Morty App
+  </p>
+ 
+<div class="search">
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    (input)="searchCharacters()"
+    placeholder="Search characters..."
+  />
+
+  </div >
+
+
+  <div class="character-container">
+ <div *ngIf="error" class="error">{{ error }}</div>
+
+  <div *ngIf="characters.length" class="character-container">
+    <div *ngFor="let character of characters" class="character-card">
+      
+<a [routerLink]="['/character', character.id]" class="character-card">
+  <img [src]="character.image" [alt]="character.name">
+  <h3>{{ character.name }}</h3>
+  <p>Status: {{ character.status }}</p>
+  <p>Species: {{ character.species }}</p>
+</a>
+
+    </div>
+  </div>
+</div>
+</div>

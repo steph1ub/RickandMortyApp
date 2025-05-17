@@ -1,0 +1,30 @@
+<div class="main-container">
+<div *ngIf="character" class="details-container">
+
+  
+<div class="character-img">
+
+
+  <h3>{{ character.name }}</h3>
+
+  <img [src]="character.image" [alt]="character.name">
+
+</div>
+
+  <div class="character-info">
+  <p><strong>Status:</strong> {{ character.status }}</p>
+  <p><strong>Species:</strong> {{ character.species }}</p>
+  <p><strong>Gender:</strong> {{ character.gender }}</p>
+  <p><strong>Origin:</strong> {{ character.origin?.name }}</p>
+  <p><strong>Location:</strong> {{ character.location?.name }}</p>
+  </div>
+
+
+</div>
+    <div class="hom-button">
+
+  <button class="hom " (click)="goBack()">← Back to Home</button>
+
+  </div>
+
+  </div>
